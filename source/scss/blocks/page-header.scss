@@ -35,6 +35,8 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  animation: logo-appear 0.7s both;
+  animation-delay: 0.2s;
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -177,6 +179,8 @@
   font-size: 1.2rem;
   line-height: 1.0418;
   color: $c-light;
+  animation: opacity-appear 1s both;
+  animation-delay: 0.3s;
 
   @media (min-width: $stop-scaling) {
     font-size: 12px;
@@ -269,7 +273,7 @@
 
     &.active {
       &::after {
-        width: 100%;
+        width: 0;
       }
     }
 
@@ -302,5 +306,12 @@
   @media (max-width: $mobile) and (orientation: landscape) {
     margin-left: 0;
     width: 100%;
+  }
+}
+
+.document-loaded {
+  .page-header__menu a.active:after {
+    width: 100%;
+    transition-delay: 0.4s;
   }
 }
