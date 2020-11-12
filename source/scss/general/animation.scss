@@ -1,0 +1,113 @@
+@keyframes social-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes social-fade {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes intro-message {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes history-text {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes game-input {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes opacity-appear {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(.16,.46,.5,1.01);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes logo-appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation-timing-function: cubic-bezier(.16,.46,.5,1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes footer-appear {
+  0% {
+    transform: translateY(100%);
+    animation-timing-function: cubic-bezier(.16,.46,.5,1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes header-toggler {
+  0% {
+    width: 0;
+    height: 0;
+    border-width: 0;
+    animation-timing-function: cubic-bezier(.16,.46,.5,1.01);
+  }
+
+  60% {
+    width: 120%;
+    height: 120%;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    border-width: 2px;
+  }
+}

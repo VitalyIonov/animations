@@ -46,6 +46,7 @@
   color: $c-dark;
   background-color: $c-light;
   z-index: 1;
+  animation: footer-appear 0.7s both 0.2s;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
