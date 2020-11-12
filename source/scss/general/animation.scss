@@ -111,3 +111,40 @@
     border-width: 2px;
   }
 }
+
+@keyframes rules-item-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    animation-timing-function: cubic-bezier(.5,.59,.7,1.4);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rules-item-text-appear {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rules-btn-appear {
+  0% {
+    transform: translate(15%, -50%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
