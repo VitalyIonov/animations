@@ -303,7 +303,11 @@
 }
 
 .screen--prizes {
-  background-color: $c-dark;
+  &.active {
+    & ~ .background-screen {
+      min-height: 100%;
+    }
+  }
 }
 
 .screen--game {
