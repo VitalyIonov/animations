@@ -1,5 +1,8 @@
 import throttle from 'lodash/throttle';
 
+import BuildLiteralAnimation from '../utils/literalAnimation';
+import { literalDelayPatternEven, literalDelayPatternOdd } from '../constants/literalAnimation';
+
 export default class FullPageScroll {
   constructor() {
     this.THROTTLE_TIMEOUT = 2000;
@@ -37,6 +40,13 @@ export default class FullPageScroll {
     this.changeVisibilityDisplay();
     this.changeActiveMenuItem();
     this.emitChangeDisplayEvent();
+
+    new BuildLiteralAnimation('.screen.active .literal-animated', {
+      delayPatternEven: literalDelayPatternEven,
+      literalDelayPatternOdd: literalDelayPatternOdd,
+      duration: '1s',
+      name: 'literal-animation'
+    });
   }
 
   changeVisibilityDisplay() {

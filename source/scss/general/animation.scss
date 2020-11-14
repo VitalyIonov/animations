@@ -148,3 +148,13 @@
     opacity: 1;
   }
 }
+
+@keyframes literal-animation {
+  0% {
+    transform: translate3d(0, 110%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 2px, 0);
+  }
+}

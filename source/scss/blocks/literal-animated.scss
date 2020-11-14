@@ -1,0 +1,10 @@
+.literal-animated {
+  & span {
+    display: inline-block;
+  }
+}
+
+.literal-animated__word {
+  overflow: hidden;
+  z-index: -1;
+}
