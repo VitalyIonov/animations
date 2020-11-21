@@ -66,3 +66,18 @@
     }
   }
 }
+
+.btn--appear {
+  animation: opacity-appear 0.4s 1.3s both;
+
+  &::after {
+    @include center;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $c-light;
+    border: 2px solid $c-light;
+    border-radius: 3.5rem;
+    animation: background-fade 0.4s 1.7s both;
+  }
+}

@@ -60,6 +60,16 @@
   }
 }
 
+@keyframes background-fade {
+  0% {
+    background-color: white;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
 @keyframes opacity-appear {
   0% {
     opacity: 0;
@@ -175,7 +185,29 @@
   @return pow(1 - $t, 3)*0 + 3*pow(1 - $t, 2)*$t * -0.5 + 3*(1 - $t)*pow($t, 2) * -1 + pow($t, 3) * 1;
 }
 
-@keyframes flamingo {
+@keyframes suitcase-appear {
+  0% {
+    transform: translate3d(-25px, 430px, 0) rotate3d(0, 0, 1, -6deg) scale3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-25px, 130px, 0) rotate3d(0, 0, 1, -6deg) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes flamingo-appear {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100px, 270px, 0) rotate3d(0, 0, 1, -45deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(-100px, 170px, 0) rotate3d(0, 0, 1, -5deg);
+  }
+}
+
+@keyframes flamingo-move {
   @for $i from 0 through 49 {
     #{$i}% {
       $t: $i / 100 * 2;
@@ -183,7 +215,7 @@
       $p2: rotate-y1($t);
       $deg: lerp(-5, 0, $t);
       $x: lerp(-100, -105, $p1);
-      $y: lerp(250, 270, $p2);
+      $y: lerp(170, 190, $p2);
       transform: translate3d(#{$x}px, #{$y}px, 0) rotate3d(0, 0, 1, #{$deg}deg);
     }
   }
@@ -195,7 +227,7 @@
       $p2: rotate-y1($t);
       $deg: lerp(0, -5, $t);
       $x: lerp(-105, -100, $p1);
-      $y: lerp(270, 250, $p2);
+      $y: lerp(190, 170, $p2);
       transform: translate3d(#{$x}px, #{$y}px, 0) rotate3d(0, 0, 1, #{$deg}deg);
     }
   }
@@ -207,7 +239,7 @@
       $t: $i / 100;
       $p: spring-wobbly($t);
       $deg: lerp(38, 0, $p);
-      transform: translate3d(-255px, 250px, 0) rotate3d(0, 0, 1, #{$deg}deg);
+      transform: translate3d(-255px, 200px, 0) rotate3d(0, 0, 1, #{$deg}deg);
     }
   }
 }
@@ -218,7 +250,7 @@
       $t: $i / 100;
       $p: spring-wobbly($t);
       $deg: lerp(-18, 20, $p);
-      transform: translate3d(150px, 90px, 0) rotate3d(0, 0, 1, #{$deg}deg);
+      transform: translate3d(150px, 40px, 0) rotate3d(0, 0, 1, #{$deg}deg);
     }
   }
 }
@@ -229,7 +261,7 @@
       $t: $i / 100;
       $p: spring-wobbly($t);
       $deg: lerp(-20, 5, $p);
-      transform: translate3d(195px, 190px, 0) rotate3d(0, 0, 1, #{$deg}deg);
+      transform: translate3d(195px, 140px, 0) rotate3d(0, 0, 1, #{$deg}deg);
     }
   }
 }
