@@ -1,5 +1,27 @@
 import Swiper from "swiper";
 
+const paintIconsToBlue = () => {
+  document.body.classList.add('icons-to-blue');
+  document.body.classList.remove('icons-to-dark', 'icons-to-purple');
+};
+
+const paintIconsToPurple = () => {
+  document.body.classList.add('icons-to-purple');
+  document.body.classList.remove('icons-to-dark', 'icons-to-blue');
+}
+
+const paintIcons = (index) => {
+  switch (index) {
+    case 0: {
+      paintIconsToPurple();
+      break;
+    }
+    default: {
+      paintIconsToBlue();
+    }
+  }
+}
+
 export default () => {
   let storySlider;
   let sliderContainer = document.getElementById(`story`);
@@ -53,12 +75,20 @@ export default () => {
           slideChange: () => {
             if (storySlider.activeIndex === 0) {
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg")`;
+
+              paintIcons(storySlider.activeIndex);
             } else if (storySlider.activeIndex === 2) {
               sliderContainer.style.backgroundImage = `url("img/slide2.jpg")`;
+
+              paintIcons(storySlider.activeIndex);
             } else if (storySlider.activeIndex === 4) {
               sliderContainer.style.backgroundImage = `url("img/slide3.jpg")`;
+
+              paintIcons(storySlider.activeIndex);
             } else if (storySlider.activeIndex === 6) {
               sliderContainer.style.backgroundImage = `url("img/slide4.jpg")`;
+
+              paintIcons(storySlider.activeIndex);
             }
           },
           resize: () => {
@@ -68,6 +98,8 @@ export default () => {
         observer: true,
         observeParents: true
       });
+
+
     }
   };
 

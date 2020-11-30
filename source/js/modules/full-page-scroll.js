@@ -50,6 +50,14 @@ export default class FullPageScroll {
   }
 
   changeVisibilityDisplay() {
+    if (this.activeScreen === 1) {
+      document.body.classList.remove('icons-to-dark', 'icons-to-blue');
+      document.body.classList.add('icons-to-purple');
+    } else {
+      document.body.classList.remove('icons-to-purple', 'icons-to-blue');
+      document.body.classList.add('icons-to-dark');
+    }
+
     this.screenElements.forEach((screen) => {
       screen.classList.add(`screen--hidden`);
       screen.classList.remove(`active`);

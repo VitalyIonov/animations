@@ -300,6 +300,63 @@
     background-size: auto calc(100vh - 13.8rem), 100% 25rem;
     background-position: top center, bottom center;
   }
+
+  &.active {
+    .slider__pagination {
+      animation: opacity-appear 0.8s 0.2s both;
+    }
+
+    .slider__control svg {
+      animation: opacity-appear 0.8s both;
+      transition: $transition-nav;
+    }
+
+    .slider__control--prev {
+      transform-origin: 50% 50%;
+      animation: slider-control-prev-appear 0.8s 0.2s both;
+    }
+
+    .slider__control--next {
+      transform-origin: 50% 50%;
+      animation: slider-control-next-appear 0.8s 0.2s both;
+    }
+  }
+}
+
+.icons-to-dark {
+  .screen--story.active .slider__control {
+    &:focus::before {
+      border-color: $c-dark;
+    }
+
+    svg {
+      color: $c-dark;
+    }
+  }
+}
+
+.icons-to-blue {
+  .screen--story.active .slider__control {
+    &:focus::before {
+      border-color: $c-blue;
+    }
+
+    svg {
+      color: $c-blue;
+    }
+  }
+}
+
+.icons-to-purple {
+  .screen--story.active .slider__control {
+    &:focus::before {
+      border-color: $c-purple;
+    }
+
+    svg {
+      color: $c-purple;
+    }
+  }
 }
 
 .screen--prizes {
